@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Me CompareMe - Side-by-Side Car and Property Comparison</title>
+    <meta name="description" content="Compare Trade Me motor and property listings side-by-side. Save listings locally, compare technical specs instantly, and find the perfect car or home.">
+    <link rel="icon" type="image/png" href="assets/icon16.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/icon128.png" alt="Trade Me CompareMe Logo" class="logo-icon">
+                <span class="logo-text">CompareMe</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#showcase">Showcase</a></li>
+                    <li><a href="#demo">Live Demo</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li class="cta-li"><a href="https://github.com/raizenshout/trademe-compareme" class="btn-cta" target="_blank">View on GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="hero-tag">🔥 Smart Trade Me Companion</span>
+        <h1>Compare Trade Me Listings <span>Side-by-Side</span></h1>
+        <p class="hero-desc">
+            Stop switching between dozens of open tabs. Save listings with one click and compare Kiwi properties and cars in a clean, comprehensive comparison matrix.
+        </p>
+        <div class="hero-buttons">
+            <a href="https://github.com/raizenshout/trademe-compareme" class="btn-cta btn-large" target="_blank">Install Extension</a>
+            <a href="#demo" class="btn-secondary btn-large">View Live Demo</a>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="features-section" id="features">
+        <h2 class="section-title">Everything you need to <span>decide with confidence</span></h2>
+        <div class="grid-3">
+            <!-- Feature Card 1 -->
+            <div class="card">
+                <span class="card-icon">🏡</span>
+                <h3>Built for Properties</h3>
+                <p>Scrapes rent, property type, available date, maximum tenants, description, address, and embeds direct Google Maps routing to help you find your next home.</p>
+            </div>
+            <!-- Feature Card 2 -->
+            <div class="card">
+                <span class="card-icon">🚗</span>
+                <h3>Tailored for Motors</h3>
+                <p>Extracts odometer, body style, transmission, seats, fuel type, plate, year, owners, import history, and displays WOF and Registration status instantly.</p>
+            </div>
+            <!-- Feature Card 3 -->
+            <div class="card">
+                <span class="card-icon">🔒</span>
+                <h3>100% Local & Private</h3>
+                <p>All listings and comparison data are stored on your device in local storage. No trackers, no remote databases, no registration. Completely private.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Showcase Section -->
+    <section class="showcase-section" id="showcase">
+        <h2 class="section-title">Designed to look <span>clean and familiar</span></h2>
+        <div class="showcase-container">
+            
+            <!-- Showcase Item 1: Popup -->
+            <div class="showcase-item">
+                <div class="showcase-content">
+                    <h3>Compact List View</h3>
+                    <p>Keep track of your active candidates in a tidy list, automatically sorted by category (Properties, Motors, Other).</p>
+                    <ul>
+                        <li>Access your saved lists directly from the toolbar</li>
+                        <li>Live updates as you save listings on active tabs</li>
+                        <li>Quick removal of outdated options</li>
+                    </ul>
+                </div>
+                <div class="showcase-image-wrapper">
+                    <img src="assets/popup_test_screenshot.png" alt="Trade Me CompareMe Popup Screenshot" class="showcase-img">
+                </div>
+            </div>
+
+            <!-- Showcase Item 2: Matrix -->
+            <div class="showcase-item">
+                <div class="showcase-content">
+                    <h3>Side-by-Side Comparison Matrix</h3>
+                    <p>Open the full comparison view in a new tab. All specs are aligned side-by-side, so differences in mileage, price, or location stand out immediately.</p>
+                    <ul>
+                        <li>Auto-highlighted discrepancies</li>
+                        <li>Full spec grids (WOF, plate, transmission, rent date)</li>
+                        <li>Expandable descriptions for quick reading</li>
+                    </ul>
+                </div>
+                <div class="showcase-image-wrapper">
+                    <img src="assets/compare_test_screenshot.png" alt="Trade Me CompareMe Comparison Matrix Screenshot" class="showcase-img">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Mock Demo Section -->
+    <section class="demo-section" id="demo">
+        <h2 class="demo-title">See the <span>Comparison Matrix</span> in action</h2>
+        <p class="demo-desc">Below is a live preview of how CompareMe organizes and displays Trade Me vehicle listing fields for easy decision making.</p>
+        
+        <div class="demo-matrix">
+            <table class="demo-table">
+                <thead>
+                    <tr>
+                        <th class="demo-field-name">Attribute</th>
+                        <th>🚗 2018 Toyota RAV4 GXL</th>
+                        <th>🚗 2017 Mazda CX-5 GSX</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="demo-field-name">Price</td>
+                        <td class="demo-val highlight">$24,990</td>
+                        <td class="demo-val highlight">$22,500</td>
+                    </tr>
+                    <tr>
+                        <td class="demo-field-name">Odometer</td>
+                        <td class="demo-val">68,400 km</td>
+                        <td class="demo-val">84,120 km</td>
+                    </tr>
+                    <tr>
+                        <td class="demo-field-name">Year</td>
+                        <td class="demo-val">2018</td>
+                        <td class="demo-val">2017</td>
+                    </tr>
+                    <tr>
+                        <td class="demo-field-name">Fuel Type</td>
+                        <td class="demo-val">Petrol</td>
+                        <td class="demo-val">Petrol</td>
+                    </tr>
+                    <tr>
+                        <td class="demo-field-name">Transmission</td>
+                        <td class="demo-val">Automatic (CVT)</td>
+                        <td class="demo-val">Automatic (6-Speed)</td>
+                    </tr>
+                    <tr>
+                        <td class="demo-field-name">WOF Expiry</td>
+                        <td class="demo-val"><span class="demo-badge">Oct 2026</span></td>
+                        <td class="demo-val"><span class="demo-badge">Mar 2026</span></td>
+                    </tr>
+                    <tr>
+                        <td class="demo-field-name">Import History</td>
+                        <td class="demo-val">NZ New</td>
+                        <td class="demo-val">Imported (Japan)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/icon128.png" alt="Trade Me CompareMe Logo" class="logo-icon">
+                    <span class="logo-text">CompareMe</span>
+                </a>
+                <p>The ultimate side-by-side comparison companion for Trade Me Kiwi property and vehicle hunters.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/raizenshout/trademe-compareme" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://github.com/raizenshout/trademe-compareme/issues" target="_blank">Report an Issue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal & Privacy</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Trade Me CompareMe. Open source under the MIT License.</p>
+            <p>Disclaimer: This extension is a third-party developer tool and is not affiliated with, endorsed by, or partnered with Trade Me Ltd.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
