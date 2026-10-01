@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trade Me CompareMe - Side-by-Side Car and Property Comparison</title>
-    <meta name="description" content="Compare Trade Me motor and property listings side-by-side. Save listings locally, compare technical specs instantly, and find the perfect car or home.">
+    <meta name="description" content="Compare Trade Me properties and cars, shortlist candidates, browse photo galleries, choose visible information, and download local PDF or CSV reports with CompareMe 1.6.0.">
     <link rel="icon" type="image/png" href="assets/icon16.png">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,9 +21,9 @@
                 <ul>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#showcase">Showcase</a></li>
-                    <li><a href="#demo">Live Demo</a></li>
+                    <li><a href="#demo">How It Works</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li class="cta-li"><a href="https://github.com/raizenshout/trademe-compareme" class="btn-cta" target="_blank">View on GitHub</a></li>
+                    <li class="cta-li"><a href="https://github.com/raizenshout/trademe-compareme" class="btn-cta" target="_blank" rel="noopener noreferrer">View on GitHub</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,15 +31,21 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <span class="hero-tag">🔥 Smart Trade Me Companion</span>
+        <span class="hero-tag">CompareMe 1.6.0 · Reports and photo galleries</span>
         <h1>Compare Trade Me Listings <span>Side-by-Side</span></h1>
         <p class="hero-desc">
-            Stop switching between dozens of open tabs. Save listings with one click and compare Kiwi properties and cars in a clean, comprehensive comparison matrix.
+            Save Kiwi properties and cars, compare your chosen information, explore photo galleries, and download a PDF report with your notes.
         </p>
         <div class="hero-buttons">
-            <a href="https://github.com/raizenshout/trademe-compareme" class="btn-cta btn-large" target="_blank">Install Extension</a>
-            <a href="#demo" class="btn-secondary btn-large">View Live Demo</a>
+            <a href="https://github.com/raizenshout/trademe-compareme/releases/tag/v1.6.0" class="btn-cta btn-large" target="_blank" rel="noopener noreferrer">Download v1.6.0</a>
+            <a href="#demo" class="btn-secondary btn-large">See How It Works</a>
         </div>
+    </section>
+
+    <section class="install-section" id="install" aria-labelledby="install-title">
+        <h2 id="install-title">Install in Chrome</h2>
+        <p>Download the v1.6.0 ZIP from the release page and extract it. Open <code>chrome://extensions</code>, enable <strong>Developer mode</strong>, choose <strong>Load unpacked</strong>, and select the folder containing <code>manifest.json</code>. To update an existing unpacked installation, replace its files in the same folder and click <strong>Reload</strong>.</p>
+        <a href="https://github.com/raizenshout/trademe-compareme/releases/tag/v1.6.0" target="_blank" rel="noopener noreferrer">Release notes, ZIP and checksum →</a>
     </section>
 
     <!-- Core Features Section -->
@@ -50,19 +56,49 @@
             <div class="card">
                 <span class="card-icon">🏡</span>
                 <h3>Built for Properties</h3>
-                <p>Scrapes rent, property type, available date, maximum tenants, description, address, and embeds direct Google Maps routing to help you find your next home.</p>
+                <p>Compare homes for sale and rent separately. See bedrooms, bathrooms, parking, floor and land area, sale method, ownership, rental availability, school information, and Google Maps links.</p>
             </div>
             <!-- Feature Card 2 -->
             <div class="card">
                 <span class="card-icon">🚗</span>
                 <h3>Tailored for Motors</h3>
-                <p>Extracts odometer, body style, transmission, seats, fuel type, plate, year, owners, import history, and displays WOF and Registration status instantly.</p>
+                <p>Extracts odometer, body style, transmission, seats, fuel type, plate, year, owners, energy economy, auction closing dates, and displays WOF and Registration status instantly.</p>
             </div>
             <!-- Feature Card 3 -->
             <div class="card">
                 <span class="card-icon">🔒</span>
-                <h3>100% Local & Private</h3>
-                <p>All listings and comparison data are stored on your device in local storage. No trackers, no remote databases, no registration. Completely private.</p>
+                <h3>Your Workspace Stays Local</h3>
+                <p>Saved listings, notes, decisions, and preferences stay in your browser. Reports are generated on your device. No accounts or analytics; loading photos and refreshing listings contacts their providers.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">✓</span>
+                <h3>A Manageable Shortlist</h3>
+                <p>Set requirements, keep uncertain options in Needs checking, and choose which candidates enter the comparison. Sort by displayed price or mileage without an automated recommendation.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">📝</span>
+                <h3>Keep Your Reasons</h3>
+                <p>Mark candidates Considering, Shortlisted, or Ruled out. Record viewing impressions and questions in plain-text notes. Restore a ruled out option whenever you reconsider.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">⚖️</span>
+                <h3>Focus on Differences</h3>
+                <p>Hide identical factual rows and compare the differences that matter. Equivalent area and mileage formats are normalised, while missing information stays visible.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">📄</span>
+                <h3>Download Comparison Reports</h3>
+                <p>PDF is the default: preview a saved snapshot of your current comparison or every listing in the group. Include photos, complete notes and descriptions, and clickable source links. CSV is available for spreadsheets.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🖼️</span>
+                <h3>Explore Listing Photos</h3>
+                <p>Browse photos one at a time, expand them, and zoom up to 4× with panning. Refresh photos on demand. If Trade Me needs to render the full gallery, open the listing and use Update saved details.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">☑️</span>
+                <h3>Choose Your Information</h3>
+                <p>Choose which information appears in each comparison group. Your PDF starts with those choices, and you can change the report fields, notes, photos, and differences independently.</p>
             </div>
         </div>
     </section>
@@ -71,20 +107,20 @@
     <section class="showcase-section" id="showcase">
         <h2 class="section-title">Designed to look <span>clean and familiar</span></h2>
         <div class="showcase-container">
-            
+
             <!-- Showcase Item 1: Popup -->
             <div class="showcase-item">
                 <div class="showcase-content">
                     <h3>Compact List View</h3>
-                    <p>Keep track of your active candidates in a tidy list, automatically sorted by category (Properties, Motors, Other).</p>
+                    <p>Manage candidate statuses and comparison selections directly from the toolbar. Full Page opens the same category and choices.</p>
                     <ul>
                         <li>Access your saved lists directly from the toolbar</li>
                         <li>Live updates as you save listings on active tabs</li>
-                        <li>Quick removal of outdated options</li>
+                        <li>Shortlist or rule out options without losing notes</li>
                     </ul>
                 </div>
                 <div class="showcase-image-wrapper">
-                    <img src="assets/popup_test_screenshot.png" alt="Trade Me CompareMe Popup Screenshot" class="showcase-img">
+                    <img loading="lazy" width="1280" height="800" src="assets/popup-1.6.jpg" alt="CompareMe 1.6.0 popup with sale candidates and comparison selections" class="showcase-img">
                 </div>
             </div>
 
@@ -92,26 +128,48 @@
             <div class="showcase-item">
                 <div class="showcase-content">
                     <h3>Side-by-Side Comparison Matrix</h3>
-                    <p>Open the full comparison view in a new tab. All specs are aligned side-by-side, so differences in mileage, price, or location stand out immediately.</p>
+                    <p>The comparison sits directly beneath the category toolbar. Open Filters or Choose candidates when needed, browse listing photos, and choose the information shown on the page and in your PDF.</p>
                     <ul>
-                        <li>Auto-highlighted discrepancies</li>
-                        <li>Full spec grids (WOF, plate, transmission, rent date)</li>
-                        <li>Expandable descriptions for quick reading</li>
+                        <li>Separate sale and rental comparisons</li>
+                        <li>Property size, sale method, rental availability, and detailed motor specs</li>
+                        <li>Differences-only viewing and plain-text decision notes</li>
                     </ul>
                 </div>
                 <div class="showcase-image-wrapper">
-                    <img src="assets/compare_test_screenshot.png" alt="Trade Me CompareMe Comparison Matrix Screenshot" class="showcase-img">
+                    <img loading="lazy" width="1280" height="800" src="assets/comparison-1.6.jpg" alt="CompareMe 1.6.0 comparison with compact toolbar and property photo carousel" class="showcase-img">
                 </div>
             </div>
 
+            <div class="showcase-item">
+                <div class="showcase-content">
+                    <h3>A Report You Can Take With You</h3>
+                    <p>Preview the actual PDF before downloading. A4 landscape pages keep listing columns aligned, with selectable text and readable links.</p>
+                    <ul>
+                        <li>Current comparison or all saved listings in the group</li>
+                        <li>Up to four listings per section, with full notes and descriptions</li>
+                        <li>Unsaved note drafts labelled in the snapshot</li>
+                        <li>Photos and notes included by default; CSV available</li>
+                    </ul>
+                </div>
+                <div class="showcase-image-wrapper">
+                    <a href="assets/report-1.6.jpg" target="_blank" rel="noopener noreferrer" aria-label="View full-size PDF export screenshot"><img src="assets/report-1.6.jpg" alt="CompareMe PDF export options and actual report preview with Download PDF button" class="showcase-img" loading="lazy" width="1280" height="800"></a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Interactive Mock Demo Section -->
+    <!-- Workflow and static comparison example -->
     <section class="demo-section" id="demo">
-        <h2 class="demo-title">See the <span>Comparison Matrix</span> in action</h2>
-        <p class="demo-desc">Below is a live preview of how CompareMe organizes and displays Trade Me vehicle listing fields for easy decision making.</p>
-        
+        <h2 class="demo-title">From saved listings to <span>a clear comparison</span></h2>
+        <p class="demo-desc">Save up to 20 listings, then open Full Page from the extension. Use the workspace to compare your candidates and take your notes into a report.</p>
+        <div class="showcase-image-wrapper"><img loading="lazy" width="1280" height="800" src="assets/candidates-1.6.jpg" alt="CompareMe 1.6.0 candidate dialog with shortlist status, notes and Needs checking group" class="showcase-img"></div>
+
+        <ol class="workflow-steps">
+            <li><strong>Save and shortlist.</strong> Save a listing on Trade Me. In Choose candidates, select options to compare, set Considering, Shortlisted, or Ruled out, and keep your notes.</li>
+            <li><strong>Focus your comparison.</strong> Use Filters to stage requirements, View, and Sort, then Apply. Choose information and Show differences only keep the matrix focused. Missing details stay marked.</li>
+            <li><strong>Explore and export.</strong> Browse and expand saved photos, then open Export report. Adjust PDF information and scope, review the preview, and download PDF or CSV.</li>
+        </ol>
+        <p class="demo-desc">Example comparison below uses sample data. Try the dialogs, photo viewer, and exports in the installed extension. Maximum displayed price uses advertised amounts; auction or negotiation prices need checking.</p>
         <div class="demo-matrix">
             <table class="demo-table">
                 <thead>
@@ -153,9 +211,9 @@
                         <td class="demo-val"><span class="demo-badge">Mar 2026</span></td>
                     </tr>
                     <tr>
-                        <td class="demo-field-name">Import History</td>
-                        <td class="demo-val">NZ New</td>
-                        <td class="demo-val">Imported (Japan)</td>
+                        <td class="demo-field-name">Decision notes</td>
+                        <td class="demo-val">Ask about service history</td>
+                        <td class="demo-val">Inspect rear-seat space</td>
                     </tr>
                 </tbody>
             </table>
@@ -170,14 +228,15 @@
                     <img src="assets/icon128.png" alt="Trade Me CompareMe Logo" class="logo-icon">
                     <span class="logo-text">CompareMe</span>
                 </a>
-                <p>The ultimate side-by-side comparison companion for Trade Me Kiwi property and vehicle hunters.</p>
+                <p>CompareMe 1.6.0 — a local comparison workspace for Kiwi property and vehicle hunters.</p>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="https://github.com/raizenshout/trademe-compareme" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://github.com/raizenshout/trademe-compareme/issues" target="_blank">Report an Issue</a></li>
+                        <li><a href="https://github.com/raizenshout/trademe-compareme" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+                        <li><a href="https://github.com/raizenshout/trademe-compareme/releases/tag/v1.6.0" target="_blank" rel="noopener noreferrer">Download v1.6.0</a></li>
+                        <li><a href="https://github.com/raizenshout/trademe-compareme/issues" target="_blank" rel="noopener noreferrer">Report an Issue</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

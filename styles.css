@@ -734,3 +734,39 @@ footer {
         padding: 1.75rem;
     }
 }
+
+/* Version 1.6 installation and workflow details. */
+.install-section {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border: 1px solid var(--border-hover);
+    border-radius: 16px;
+    background: var(--bg-card);
+}
+.install-section h2 { font-family: var(--font-heading); margin-bottom: 0.75rem; }
+.install-section p { color: var(--text-secondary); margin-bottom: 1rem; }
+.install-section a { color: var(--accent-yellow); }
+.install-section code { overflow-wrap: anywhere; color: var(--text-primary); }
+.workflow-steps { text-align: left; padding-left: 1.5rem; margin: 2rem auto; max-width: 900px; color: var(--text-secondary); }
+.workflow-steps li { padding: 0.5rem 0 0.5rem 0.5rem; }
+.workflow-steps strong { color: var(--text-primary); }
+.showcase-content, .showcase-image-wrapper { min-width: 0; }
+a:focus-visible { outline: 3px solid var(--accent-yellow); outline-offset: 4px; }
+html { scroll-padding-top: 110px; }
+@media (max-width: 968px) {
+    .nav-container { flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
+    .install-section { margin: 2rem; }
+}
+@media (max-width: 576px) {
+    .install-section { margin: 2rem 1rem; padding: 1.5rem; }
+    .demo-table { min-width: 560px; }
+    nav ul li:not(.cta-li) { display: block; }
+    nav ul { gap: 0.5rem 1rem; }
+    nav a { font-size: 0.85rem; }
+    html { scroll-padding-top: 190px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+}

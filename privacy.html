@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Trade Me CompareMe Chrome Extension</title>
-    <meta name="description" content="Official Privacy Policy for the Trade Me CompareMe Chrome Extension. Our extension operates entirely offline, storing all listing comparisons locally.">
+    <meta name="description" content="Official Privacy Policy for the Trade Me CompareMe Chrome Extension. The extension stores listing comparisons locally and generates reports on your device.">
     <link rel="icon" type="image/png" href="assets/icon16.png">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,9 +21,9 @@
                 <ul>
                     <li><a href="index.html#features">Features</a></li>
                     <li><a href="index.html#showcase">Showcase</a></li>
-                    <li><a href="index.html#demo">Live Demo</a></li>
+                    <li><a href="index.html#demo">How It Works</a></li>
                     <li><a href="privacy.html" class="active">Privacy Policy</a></li>
-                    <li class="cta-li"><a href="https://github.com/raizenshout/trademe-compareme" class="btn-cta" target="_blank">View on GitHub</a></li>
+                    <li class="cta-li"><a href="https://github.com/raizenshout/trademe-compareme" class="btn-cta" target="_blank" rel="noopener noreferrer">View on GitHub</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,12 +33,12 @@
     <div class="privacy-container">
         <div class="privacy-header">
             <h1>Privacy Policy</h1>
-            <p>Effective Date: May 22, 2026 | Last Updated: May 22, 2026</p>
+            <p>Effective Date: May 22, 2026 | Last Updated: October 2, 2026 · Version 1.6.0</p>
         </div>
 
         <div class="privacy-card">
             <p class="privacy-intro">
-                The <strong>Trade Me CompareMe</strong> Chrome Extension is designed with a strict "privacy-first" and local-only philosophy. We believe that your search history, vehicle preferences, and housing candidates are entirely personal. That is why this extension does not collect, transmit, or share any user data.
+                The <strong>Trade Me CompareMe</strong> Chrome Extension is designed with a strict "privacy-first" and local-only philosophy. We believe that your search history, vehicle preferences, and housing candidates are entirely personal. Your saved decision workspace stays in your browser. We do not operate a service that receives your saved listings, notes, decisions, or reports.
             </p>
 
             <!-- Section 1 -->
@@ -47,9 +47,10 @@
                 <p>When you browse Trade Me listings and explicitly choose to save a listing by clicking the "Save to Compare" button, the extension extracts only the following public listing details:</p>
                 <ul>
                     <li><strong>Listing Identifiers:</strong> The Trade Me Listing ID and URL.</li>
-                    <li><strong>General Info:</strong> Listing title, price, and primary image URL.</li>
-                    <li><strong>Property Specs:</strong> Property type, available date, maximum tenants, description snippet, and address.</li>
-                    <li><strong>Motor Specs:</strong> Odometer mileage, body style, seats, fuel type, engine size, transmission, plate number, year, color, number of owners, NZ import history, registration expiry, and WOF expiry.</li>
+                    <li><strong>General Info:</strong> Listing title, price, and ordered gallery image URLs.</li>
+                    <li><strong>Property Specs:</strong> Sale/rent mode, type, bedrooms, bathrooms, parking, floor/land area, ownership, sale method/date, availability, maximum tenants, description, address, and school information.</li>
+                    <li><strong>Motor Specs:</strong> Odometer mileage, body style, seats, fuel type, engine size, transmission, plate number, year, color, owners, energy economy, auction closing date, registration expiry, and WOF expiry.</li>
+                    <li><strong>Your Decision Workspace:</strong> Plain-text notes, Considering/Shortlisted/Ruled out statuses, requirements, sorting, comparison selections, differences-view preferences, and information visibility choices.</li>
                 </ul>
                 <p>These fields are extracted dynamically from the webpage DOM and structured metadata elements of the listing pages you actively choose to save.</p>
             </div>
@@ -57,17 +58,17 @@
             <!-- Section 2 -->
             <div class="privacy-section">
                 <h2>2. How We Store and Process Your Data</h2>
-                <p>All extracted listing details are processed and stored entirely offline in your browser's local sandbox using the <strong>chrome.storage.local</strong> Chrome API.</p>
+                <p>Extracted listing details and your workspace are processed on your device and stored in your browser using the <strong>chrome.storage.local</strong> Chrome API.</p>
                 <div class="privacy-callout">
                     <h3>🔒 Absolute Local Storage Guarantee</h3>
-                    <p>We do not operate any background servers, remote databases, API gateways, or tracking systems. None of your extracted listing data, browsing behavior, or search queries ever leave your local computer. There is zero network communication or data synchronisation with remote infrastructure.</p>
+                    <p>We do not operate servers, remote databases, or tracking systems. Notes, statuses, and workspace preferences stay in your browser. Displaying listing images and fonts makes requests to their providers. Manual price or photo refresh reads the original Trade Me listing; opening a listing or map navigates to that provider. PDF and CSV reports are generated locally and downloaded to your chosen location; PDF preparation may request listing photos. Notes and report contents are not uploaded to a report service. There is no remote synchronisation of your saved decision data.</p>
                 </div>
             </div>
 
             <!-- Section 3 -->
             <div class="privacy-section">
                 <h2>3. Third-Party Disclosures & Data Sharing</h2>
-                <p>Because we do not collect or transmit user data to any external location, it is impossible for us to share, sell, distribute, rent, or lease your personal information to third parties.</p>
+                <p>We do not receive or sell your saved workspace or report contents. Loading remote photos or fonts and refreshing a listing makes normal browser requests to those providers. Opening a listing or map takes you to that provider. Downloaded reports remain under your control.</p>
                 <ul>
                     <li>No advertisement networks are integrated.</li>
                     <li>No telemetry, web beacons, or analytics scripts (such as Google Analytics) are loaded.</li>
@@ -81,8 +82,7 @@
                 <p>To operate securely, the extension requests minimal permissions under Chrome's Manifest V3 standard:</p>
                 <ul>
                     <li><strong>storage:</strong> Required to save your selected listings locally so they persist across tabs, popups, and browser sessions.</li>
-                    <li><strong>activeTab:</strong> Required to access and scrape public specs only when you are actively viewing a listing and choose to save it.</li>
-                    <li><strong>*://*.trademe.co.nz/* matches:</strong> Used strictly to inject the content script that displays the "Save to Compare" floating button on eligible Trade Me property and vehicle detail pages.</li>
+                    <li><strong>*://*.trademe.co.nz/* matches:</strong> Used to inject the "Save to Compare" control on listing pages and read original Trade Me listings when you request a price or photo refresh.</li>
                 </ul>
             </div>
 
@@ -92,7 +92,9 @@
                 <p>You have full, immediate control over all data stored by the extension:</p>
                 <ul>
                     <li><strong>Individual Removal:</strong> You can delete any saved listing instantly by clicking the "Remove" or "Trash" icon in either the toolbar popup or the side-by-side comparison matrix.</li>
-                    <li><strong>Complete Purge:</strong> Uninstalling the extension, clearing Chrome's site data, or resetting extension preferences will permanently wipe all saved listing metrics from your computer. Deleted data is non-recoverable because we do not keep backups.</li>
+                    <li><strong>Decision Metadata:</strong> Removing a listing deletes its notes, status, and selections. Ruling it out keeps this data for restoration. Confirmed Clear All resets listings, decisions, and workspace preferences.</li>
+                    <li><strong>Downloaded Reports:</strong> PDF and CSV files may include your notes when enabled. You control their sharing and must delete downloaded files separately from extension storage.</li>
+                    <li><strong>Complete Purge:</strong> Uninstalling the extension removes its saved workspace. Use confirmed Clear All to reset listings, decisions, and preferences. We do not keep remote backups; downloaded reports are separate files and are not removed by these actions.</li>
                 </ul>
             </div>
 
@@ -107,7 +109,7 @@
                 <h2>7. Contact and Support</h2>
                 <p>Trade Me CompareMe is an open-source project. If you have any questions, feedback, or concerns regarding your privacy, please feel free to open a ticket or reach out via our GitHub repository issues dashboard:</p>
                 <ul>
-                    <li><strong>GitHub Issues:</strong> <a href="https://github.com/raizenshout/trademe-compareme/issues" target="_blank">raizenshout/trademe-compareme/issues</a></li>
+                    <li><strong>GitHub Issues:</strong> <a href="https://github.com/raizenshout/trademe-compareme/issues" target="_blank" rel="noopener noreferrer">raizenshout/trademe-compareme/issues</a></li>
                 </ul>
             </div>
         </div>
@@ -121,14 +123,14 @@
                     <img src="assets/icon128.png" alt="Trade Me CompareMe Logo" class="logo-icon">
                     <span class="logo-text">CompareMe</span>
                 </a>
-                <p>The ultimate side-by-side comparison companion for Trade Me Kiwi property and vehicle hunters.</p>
+                <p>CompareMe 1.6.0 — a local comparison workspace for Kiwi property and vehicle hunters.</p>
             </div>
             <div class="footer-links">
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="https://github.com/raizenshout/trademe-compareme" target="_blank">GitHub Repository</a></li>
-                        <li><a href="https://github.com/raizenshout/trademe-compareme/issues" target="_blank">Report an Issue</a></li>
+                        <li><a href="https://github.com/raizenshout/trademe-compareme" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+                        <li><a href="https://github.com/raizenshout/trademe-compareme/issues" target="_blank" rel="noopener noreferrer">Report an Issue</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
